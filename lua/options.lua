@@ -2,11 +2,21 @@
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 
+-- Set scroll of automatically
+vim.o.scrolloff = 9
+
+-- Configure tabs and space
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
+
 -- Set highlight on search
 vim.o.hlsearch = false
 
--- Make line numbers default
+-- Make line numbers default and relative
 vim.wo.number = true
+vim.wo.relativenumber = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
