@@ -12,7 +12,7 @@ require('lazy').setup({
   'tpope/vim-rhubarb',
 
   -- Detect tabstop and shiftwidth automatically
-  'tpope/vim-sleuth',
+  -- 'tpope/vim-sleuth',
 
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
@@ -127,7 +127,7 @@ require('lazy').setup({
     },
   },
 
-  {
+  --[[{
     -- Theme inspired by Atom
     'navarasu/onedark.nvim',
     priority = 1000,
@@ -135,6 +135,7 @@ require('lazy').setup({
       vim.cmd.colorscheme 'onedark'
     end,
   },
+  ]]
 
   {
     -- Set lualine as statusline
@@ -142,14 +143,15 @@ require('lazy').setup({
     -- See `:help lualine.txt`
     opts = {
       options = {
-        icons_enabled = false,
-        theme = 'onedark',
+        icons_enabled = true,
+        theme = 'gruvbox',
         component_separators = '|',
         section_separators = '',
       },
     },
   },
 
+  --[[
   {
     -- Add indentation guides even on blank lines
     'lukas-reineke/indent-blankline.nvim',
@@ -158,6 +160,7 @@ require('lazy').setup({
     main = 'ibl',
     opts = {},
   },
+  ]]
 
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },

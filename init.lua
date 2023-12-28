@@ -9,9 +9,10 @@ Last update: 2023-12-28
 
 Based on:
 - https://github.com/dam9000/kickstart-modular.nvim
-- https://www.youtube.com/watch?v=w7i4amO_zaE 
+- https://www.youtube.com/watch?v=w7i4amO_zaE
 
-]]--
+]]
+--
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
@@ -52,6 +53,12 @@ require 'harpoon-setup'
 
 -- [[ Configure Undo-tree ]]
 require 'undo-tree-setup'
+
+-- [[ Configure Dashboard]]
+require 'nvim-dashboard-setup'
+
+-- [[ Configure Obsidian]]
+require 'obsidian-setup'
 
 -- [[ Configure Colorscheme ]]
 require 'gruvbox-setup'
