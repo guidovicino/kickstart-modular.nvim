@@ -25,5 +25,8 @@ db.setup({
             { action = "Lazy update", desc = "Update", group = 'Number', icon = "󰊳 ", key = "u" },
             { action = "qa", desc = "Quit", group = 'Label', icon = " ", key = "q" },
         },
+        project = { limit = 8 },
+        mru = { limit = 8 },
+        footer = {}
     },
 })
