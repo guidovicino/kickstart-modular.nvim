@@ -52,6 +52,9 @@ require 'cmp-setup'
 require 'harpoon-setup'
 
 -- [[ Configure Undo-tree ]]
+require 'neo-tree-setup'
+
+-- [[ Configure Undo-tree ]]
 require 'undo-tree-setup'
 
 -- [[ Configure Dashboard]]
