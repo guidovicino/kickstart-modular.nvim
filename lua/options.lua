@@ -5,6 +5,10 @@
 -- Set scroll of automatically
 vim.o.scrolloff = 9
 
+-- Wrap and Colorclumn
+vim.o.wrap = true
+vim.o.colorcolumn = '80'
+
 -- Configure tabs and space
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
