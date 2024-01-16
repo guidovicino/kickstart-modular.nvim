@@ -16,7 +16,7 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 
 -- Set highlight on search
-vim.o.hlsearch = false
+vim.o.hlsearch = true
 
 -- Make line numbers default and relative
 vim.wo.number = true
