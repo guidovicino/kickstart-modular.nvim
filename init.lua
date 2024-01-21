@@ -67,5 +67,5 @@ require 'obsidian-setup'
 require 'gruvbox-setup'
 -- require 'rose-pine-setup'
 
--- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
+-- [[ Configure Pico-8 ]]
+require 'pico-8-setup'
