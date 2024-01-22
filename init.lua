@@ -1,4 +1,5 @@
 --[[
+--
 
 =======================
 GV Neovim Configuration
@@ -13,6 +14,9 @@ Based on:
 
 ]]
 --
+
+-- Force 'en_US.UTF-8' language
+vim.api.nvim_exec2('language en_US.UTF-8', { ['output'] = true })
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
