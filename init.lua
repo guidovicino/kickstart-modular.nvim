@@ -1,5 +1,4 @@
 --[[
---
 
 =======================
 GV Neovim Configuration
@@ -70,6 +69,12 @@ require 'gruvbox-setup'
 
 -- [[ Configure Pico-8 ]]
 require 'pico-8-setup'
+
+-- [[ Configure Zen-mode ]]
+require 'zenmode-setup'
+
+-- [[ Configure Twilight ]]
+require 'twilight-setup'
 
 -- [[ Configure Chatgpt ]]
 require 'gp-setup'
