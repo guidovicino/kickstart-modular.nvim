@@ -1,4 +1,5 @@
-local logo = [[
+local logo = ''
+--[[local logo = [[
 ░   ░░░  ░        ░░      ░░  ░░░░  ░        ░  ░░░░  ░
 ▒    ▒▒  ▒  ▒▒▒▒▒▒▒  ▒▒▒▒  ▒  ▒▒▒▒  ▒▒▒▒  ▒▒▒▒   ▒▒   ▒
 ▓  ▓  ▓  ▓      ▓▓▓  ▓▓▓▓  ▓▓  ▓▓  ▓▓▓▓▓  ▓▓▓▓        ▓
@@ -91,8 +92,7 @@ local logo = [[
 
 ]]
 
---[[
---local logo = [[
+--[[ local logo = [[
  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⠇⠀⠀⠀⠀⠀⠀⠀⠀
  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡾⠋⠀⠀⠀⠀⠀⠀⠀⣠⡆⠀
  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠰⠁⠀⢀⠀⠀⣿⣧⡔⠀⠀⠀⠀⠀⠀⣰⠟⠁⠀
@@ -112,8 +112,25 @@ local logo = [[
  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠱⠢⣿⡿⣿⡗⠎⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ]]
 
+--
+-- Return a random quote from a txt file
+--
+local function random_quote(path)
+    local file = io.open(path, "r")
+    local quotes = {}
 
-logo = string.rep("\n", 8) .. logo .. "\n\n"
+    if file ~= nil then
+        for line in file:lines() do
+            table.insert(quotes, line)
+        end
+        file:close()
+    end
+
+    return quotes[math.random(#quotes)]
+end
+
+-- logo = string.rep("\n", 8) .. logo .. "\n\n"
+logo = string.rep("\n", 8) .. logo .. "\n" .. random_quote(vim.fn.stdpath('config') .. '/lua/quotes.txt') .. "\n\n"
 
 local db = require("dashboard")
 db.setup({
