@@ -1,4 +1,6 @@
--- Harpoon (mark and jumping between open files)
+--
+-- Pico 8 - Plugin
+--
 
 return {
     'bakudankun/pico-8.vim',

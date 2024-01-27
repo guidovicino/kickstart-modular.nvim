@@ -64,12 +64,12 @@ require 'undo-tree-setup'
 -- [[ Configure Dashboard]]
 require 'nvim-dashboard-setup'
 
--- [[ Configure Obsidian]]
-require 'obsidian-setup'
-
 -- [[ Configure Colorscheme ]]
 require 'gruvbox-setup'
 -- require 'rose-pine-setup'
 
 -- [[ Configure Pico-8 ]]
 require 'pico-8-setup'
+
+-- [[ Configure Chatgpt ]]
+require 'gp-setup'
