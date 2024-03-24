@@ -78,8 +78,10 @@ local servers = {
   clangd = {},
   gopls = {},
   pyright = {},
+  marksman = {},
   rust_analyzer = {},
   tsserver = {},
+  dotls = {},
   html = { filetypes = { 'html', 'twig', 'hbs' } },
   lua_ls = {
     Lua = {
@@ -90,7 +92,7 @@ local servers = {
     },
   },
 }
-
+--
 -- Setup neovim lua configuration
 require('neodev').setup()
 
