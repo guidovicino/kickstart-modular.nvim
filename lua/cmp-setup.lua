@@ -6,16 +6,6 @@ local lspkind = require 'lspkind'
 require('luasnip.loaders.from_vscode').lazy_load()
 luasnip.config.setup {}
 
--- copilot - tab completion configuration
-
--- Unlike other completion sources, copilot can use other lines above or below an empty line to provide a completion. This can cause problematic for individuals that select menu entries with <TAB>. This behavior is configurable via cmp's config and the following code will make it so that the menu still appears normally, but tab will fallback to indenting unless a non-whitespace character has actually been typed.
-
-local has_words_before = function()
-  if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then return false end
-  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-  return col ~= 0 and vim.api.nvim_buf_get_text(0, line - 1, 0, line - 1, col, {})[1]:match("^%s*$") == nil
-end
-
 cmp.setup {
   formatting = {
     format = lspkind.cmp_format({
@@ -103,8 +93,6 @@ cmp.setup {
     end, { 'i', 's' }),
   },
   sources = {
-    -- Copilot source
-    { name = 'copilot',  group_index = 2, },
     -- Other sources
     { name = 'nvim_lsp', group_index = 2 },
     { name = 'luasnip',  group_index = 2 },
