@@ -78,3 +78,6 @@ require 'twilight-setup'
 
 -- [[ Configure Chatgpt ]]
 require 'gp-setup'
+
+-- [[ Configure Copilot ]]
+-- require 'copilot-setup'
