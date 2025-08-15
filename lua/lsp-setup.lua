@@ -86,7 +86,7 @@ local servers = {
   pyright = {},
   marksman = {},
   rust_analyzer = {},
-  tsserver = {},
+  ts_ls = {},
   dotls = {},
   html = { filetypes = { 'html', 'twig', 'hbs' } },
   lua_ls = {
