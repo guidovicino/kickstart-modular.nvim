@@ -126,23 +126,4 @@ mason_lspconfig.setup {
   },
 }
 
-<<<<<<< HEAD
-=======
-mason_lspconfig.setup_handlers {
-  function(server_name)
-    -- https://github.com/neovim/nvim-lspconfig/pull/3232
-    if server_name == "tsserver" then
-      server_name = "ts_ls"
-    end
-
-    require('lspconfig')[server_name].setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      settings = servers[server_name],
-      filetypes = (servers[server_name] or {}).filetypes,
-    }
-  end,
-}
->>>>>>> d4d8539cdeaa694009537f3a58c6546239777db8
-
 -- vim: ts=2 sts=2 sw=2 et
