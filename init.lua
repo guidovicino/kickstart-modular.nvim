@@ -76,8 +76,11 @@ require 'zenmode-setup'
 -- [[ Configure Twilight ]]
 require 'twilight-setup'
 
+-- [[ Configure Codecompanion ]]
+require 'codecompanion'
+
 -- [[ Configure Chatgpt ]]
-require 'gp-setup'
+-- require 'gp-setup'
 
 -- [[ Configure Copilot ]]
 -- require 'copilot-setup'
